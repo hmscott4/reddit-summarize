@@ -1,0 +1,8 @@
+{
+    "powershell.integratedConsole.focusConsoleOnExecute": false,
+    "powershell.codeFormatting.useSpaces": true,
+    "powershell.codeFormatting.indentationSize": 4,
+    "powershell.codeFormatting.newLineAfterAllmanStyleBraces": true,
+    "editor.formatOnSave": true,
+    "powershell.scriptAnalysis.enable": true
+}
