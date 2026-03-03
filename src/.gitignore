@@ -10,3 +10,47 @@
 # OS generated
 Thumbs.db
 .DS_Store
+
+# Ignore PowerShell module cache
+.ps_modules/
+
+# Ignore personal data like API keys
+secrets.json
+
+# Sample from web search
+# Ignore build results and temporary files
+[Dd]ebug/
+[Rr]elease/
+[Bb]in/
+[Oo]bj/
+artifacts/
+bld/
+*.TempPoint.*
+*.RestorePoint.*
+
+# Ignore log files and databases
+logfile/
+*.sqldb
+
+# Ignore Visual Studio and editor-specific files
+.vs/
+*.suo
+*.user
+*.userprefs
+*.sln.docstates
+
+# Ignore NuGet configuration and package folders
+nuget.config
+Sources/packages/
+Lib/Default/
+Lib/Standard/
+Lib/Core/
+
+# Ignore Pester test results or documentation files
+[Tt]est[Rr]esult*/
+TestResult.xml
+PesterGlossary.docx
+
+# Ignore environment variable files
+.env
+.env.local

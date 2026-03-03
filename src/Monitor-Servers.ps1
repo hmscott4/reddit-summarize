@@ -4,8 +4,15 @@
 # 1. Load the helper function
 . "$PSScriptRoot\src\Get-ServerMetrics.ps1"
 
-# 2. Define target servers (Modify this list or load from a file)
-$servers = @("localhost")
+# 2. Define target servers (Load from JSON file)
+$serverListFile = "$PSScriptRoot\servers.json"
+if (Test-Path $serverListFile) {
+    $servers = Get-Content $serverListFile -Raw | ConvertFrom-Json
+}
+else {
+    Write-Warning "File '$serverListFile' not found. Defaulting to localhost."
+    $servers = @(@{ ComputerName = "localhost"; Agent = "Default" })
+}
 
 Write-Host "Starting Server Monitor..." -ForegroundColor Cyan
 

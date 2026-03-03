@@ -5,8 +5,11 @@ function Get-ServerMetrics {
     #>
     [CmdletBinding()]
     param (
-        [Parameter(ValueFromPipeline = $true)]
+        [Parameter(ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true)]
         [string[]]$ComputerName = "localhost",
+
+        [Parameter(ValueFromPipelineByPropertyName = $true)]
+        [string]$Agent,
 
         [pscredential]$Credential
     )
@@ -45,6 +48,7 @@ function Get-ServerMetrics {
 
                 [PSCustomObject]@{
                     ComputerName         = $computer
+                    Agent                = $Agent
                     Status               = "Online"
                     Manufacturer         = $cs.Manufacturer
                     Model                = $cs.Model
@@ -63,7 +67,7 @@ function Get-ServerMetrics {
             }
             catch {
                 Write-Error "Failed to connect to $computer : $($_.Exception.Message)"
-                [PSCustomObject]@{ ComputerName = $computer; Status = "Unreachable" }
+                [PSCustomObject]@{ ComputerName = $computer; Agent = $Agent; Status = "Unreachable" }
             }
         }
     }

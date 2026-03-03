@@ -1,0 +1,10 @@
+[
+    {
+        "ComputerName": "localhost",
+        "Agent": "Local-Monitor"
+    },
+    {
+        "ComputerName": "127.0.0.1",
+        "Agent": "Secondary-Agent"
+    }
+]

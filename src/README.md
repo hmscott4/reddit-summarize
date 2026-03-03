@@ -11,7 +11,17 @@ A PowerShell-based tool to monitor the health and performance of Windows Servers
 
 ## Usage
 
-The main entry point is `Monitor-Servers.ps1`.
+1. Configure your servers in `src\servers.json`:
+   ```json
+   [
+     {
+       "ComputerName": "Server01",
+       "Agent": "Primary"
+     }
+   ]
+   ```
+
+2. Run the monitor script:
 
 ```powershell
 .\Monitor-Servers.ps1
