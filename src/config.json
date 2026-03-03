@@ -1,0 +1,6 @@
+{
+    "DatabaseServer": "DB-01",
+    "Threads": 4,
+    "AgentName": "Default",
+    "ApplicationName": "WindowsServerMonitor"
+}

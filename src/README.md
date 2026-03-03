@@ -11,20 +11,18 @@ A PowerShell-based tool to monitor the health and performance of Windows Servers
 
 ## Usage
 
-1. Configure your servers in `src\servers.json`:
-   ```json
-   [
-     {
-       "ComputerName": "Server01",
-       "Agent": "Primary"
-     }
-   ]
-   ```
+The script can be run in two ways:
 
-2. Run the monitor script:
+### 1. Using a Server List File (Default)
+
+Configure your servers in `src\servers.json` (or another file) and run the script.
 
 ```powershell
+# Use the default servers.json
 .\Monitor-Servers.ps1
+
+# Specify a different server list file
+.\Monitor-Servers.ps1 -ServerListFile C:\path\to\other-servers.json
 ```
 
 The script `src\Get-ServerMetrics.ps1` contains the core function and can be used directly in other scripts after being imported:
