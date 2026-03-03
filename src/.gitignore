@@ -1,0 +1,12 @@
+# PowerShell
+*.psd1
+*.psm1
+*.log
+
+# Editor directories
+.vscode/
+.idea/
+
+# OS generated
+Thumbs.db
+.DS_Store
